@@ -3,9 +3,9 @@
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
           <v-card-media
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
             height="300px"
           >
+            <!-- <img :src="dataUrl" /> -->
           </v-card-media>
   
           <v-card-title primary-title>
@@ -34,10 +34,7 @@
     </v-layout>
   </template>
 
-<script>
-    export default {
-        data: () => ({
-            show: false
-        })
-    }
-</script>
+  <script>
+    const img = require('../../files/image')
+
+  </script>
