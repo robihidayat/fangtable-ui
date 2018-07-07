@@ -5,22 +5,21 @@
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
           <v-card-media
-            height="350px"
+            height="auto"
           >
             <div class="WebcamContainer"></div>
           </v-card-media>
   
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-              <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+              <h3 class="headline mb-0">Now please stand 1 metre from the camera.. <br> and smile...</h3>
             </div>
           </v-card-title>
           
-          <v-card-actions>
+          <!-- <v-card-actions>
             <v-btn flat color="orange">Share</v-btn>
             <v-btn flat color="orange">Explore</v-btn>
-          </v-card-actions>
+          </v-card-actions> -->
         </v-card>
       </v-flex>
     </v-layout>
