@@ -10,7 +10,7 @@
           </v-card-media>
   
           <v-card-title primary-title>
-            <div>
+            <div v-if="showres">
               <div class="headline">Here is your result: </div>
               <span class="grey--text">The perfect size for you is {{ size }} ({{ gender }})</span>
             </div>
@@ -47,6 +47,8 @@ export default {
       },
       size: 'M',
       gender: 'Male',
+        show: false,
+        showres: false,
       errors: []
     }
   },
@@ -56,10 +58,11 @@ export default {
            path: '/Users/robihidayat/ngoding/hackaton/fangtable/fangtable-ui/files/gambar.jpg',
         })
         .then(response => {
-            console.log(response.data)
-            var obj = JSON.parse(response.data)
+            console.log(response.data.data)
+            var obj = JSON.parse(response.data.data)
             this.size = obj.size
             this.gender = obj.gender
+            this.showres = true
         })
         .catch(e => {
             console.log(e)

@@ -15,11 +15,6 @@
               <h3 class="headline mb-0">Now please stand 1 metre from the camera.. <br> and smile...</h3>
             </div>
           </v-card-title>
-          
-          <!-- <v-card-actions>
-            <v-btn flat color="orange">Share</v-btn>
-            <v-btn flat color="orange">Explore</v-btn>
-          </v-card-actions> -->
         </v-card>
       </v-flex>
     </v-layout>
@@ -28,11 +23,10 @@
 
 <script>
     const Uppy = require("@uppy/core");
-    const defaultStore = require('@uppy/store-default')
-    const Dashboard = require("@uppy/dashboard");
-    const XHRUpload = require("@uppy/xhr-upload");
+    const defaultStore = require('@uppy/store-default');
     const Webcam = require('@uppy/webcam');
-    const Tus = require('@uppy/tus')
+    const Tus = require('@uppy/tus');
+    const Informer = require('@uppy/informer');
 
     export default {
         props: {
@@ -61,6 +55,9 @@
               // locale: defaultLocale,
               store: defaultStore()
             })
+            uppy.use(Informer, {
+                // options
+            })
             uppy.use(Webcam, {
               id: Webcam,
               onBeforeSnapshot: () => Promise.resolve(),
@@ -69,7 +66,7 @@
               modes: [
                 'picture'
               ],
-              mirror: true,
+              mirror: false,
               facingMode: 'user',
               locale: {
                 strings: {
@@ -88,8 +85,6 @@
               // retryDelays: [0, 1000, 3000, 5000]
             })
             uppy.run();
-        },
-
-        methods: {}
+        }
     }
 </script>

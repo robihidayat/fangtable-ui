@@ -10,6 +10,7 @@
   "dependencies": {
     "@uppy/core": "^0.26.0",
     "@uppy/dashboard": "^0.26.0",
+    "@uppy/informer": "^0.26.0",
     "@uppy/tus": "^0.26.0",
     "@uppy/webcam": "^0.26.0",
     "@uppy/xhr-upload": "^0.26.0",
