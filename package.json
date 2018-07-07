@@ -13,6 +13,7 @@
     "@uppy/tus": "^0.26.0",
     "@uppy/webcam": "^0.26.0",
     "@uppy/xhr-upload": "^0.26.0",
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "register-service-worker": "^1.0.0",
