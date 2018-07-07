@@ -8,7 +8,7 @@
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
-            <h3 class="display-3">Fitz App</h3>
+            <h3 class="display-3">FitzMe App</h3>
           </v-flex>
         </v-layout>
       </v-container>
