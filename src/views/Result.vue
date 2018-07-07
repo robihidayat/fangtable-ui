@@ -11,8 +11,8 @@
   
           <v-card-title primary-title>
             <div>
-              <div class="headline">Top western road trips</div>
-              <span class="grey--text">1,000 miles of wonder</span>
+              <div class="headline">Here is your result: </div>
+              <span class="grey--text">The perfect size for you is {{ size }} ({{ gender }})</span>
             </div>
           </v-card-title>
   
@@ -45,6 +45,8 @@ export default {
       postBody: {
           'path':'/Users/robihidayat/ngoding/hackaton/fangtable/fangtable-ui/files/gambar.jpg'
       },
+      size: 'M',
+      gender: 'Male',
       errors: []
     }
   },
@@ -54,7 +56,10 @@ export default {
            path: '/Users/robihidayat/ngoding/hackaton/fangtable/fangtable-ui/files/gambar.jpg',
         })
         .then(response => {
-            console.log(response)
+            console.log(response.data)
+            var obj = JSON.parse(response.data)
+            this.size = obj.size
+            this.gender = obj.gender
         })
         .catch(e => {
             console.log(e)
@@ -62,28 +67,5 @@ export default {
         })
     }
   }
-
-  // Pushes posts to the server when called.
-//   postPost() {
-//     axios.post(`http://localhost:8082/api/process`, {
-//       img: '../../files/gambar.jpg',
-//     })
-//     .then(response => {
-//         console.log(response)
-//     })
-//     .catch(e => {
-//       this.errors.push(e)
-//     })
-
-    // async / await version (postPost() becomes async postPost())
-    //
-    // try {
-    //   await axios.post(`http://jsonplaceholder.typicode.com/posts`, {
-    //     body: this.postBody
-    //   })
-    // } catch (e) {
-    //   this.errors.push(e)
-    // }
-//   }
 }
 </script>

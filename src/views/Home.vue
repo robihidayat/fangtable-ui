@@ -7,7 +7,7 @@
       <v-container fill-height>
         <v-layout align-center>
           <v-flex text-xs-center>
-            <h4 class="display-4">Fitz<span class="red">Me</span> App</h4>
+            <h4 class="display-4">Fitz<span class="red--text">Me</span> App</h4>
             <h5 class="display-2">online shopping made sustainable</h5>
           </v-flex>
         </v-layout>
