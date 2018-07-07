@@ -42,20 +42,22 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      postBody: '',
+      postBody: {
+          'path':'/Users/robihidayat/ngoding/hackaton/fangtable/fangtable-ui/files/gambar.jpg'
+      },
       errors: []
     }
   },
   methods: {
     postPost: function () {
-       axios.post(`http://localhost:8082/api/process`, {
-            img: '../../files/gambar.jpg',
+       axios.post(`http://localhost:8083/process`, {
+           path: '/Users/robihidayat/ngoding/hackaton/fangtable/fangtable-ui/files/gambar.jpg',
         })
         .then(response => {
             console.log(response)
         })
         .catch(e => {
-            console.log('Error gan')
+            console.log(e)
             this.errors.push(e)
         })
     }
