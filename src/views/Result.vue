@@ -1,4 +1,5 @@
 <template>
+    <v-container fluid>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
@@ -16,8 +17,8 @@
           </v-card-title>
   
           <v-card-actions>
-            <v-btn flat>Share</v-btn>
-            <v-btn flat color="purple">Explore</v-btn>
+            <v-btn flat color="purple" v-on:click="postPost">Submit</v-btn>
+            <v-btn flat color="purple">Share</v-btn>
             <v-spacer></v-spacer>
             <v-btn icon @click="show = !show">
               <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
@@ -32,4 +33,55 @@
         </v-card>
       </v-flex>
     </v-layout>
+    </v-container>
   </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      postBody: '',
+      errors: []
+    }
+  },
+  methods: {
+    postPost: function () {
+       axios.post(`http://localhost:8082/api/process`, {
+            img: '../../files/gambar.jpg',
+        })
+        .then(response => {
+            console.log(response)
+        })
+        .catch(e => {
+            console.log('Error gan')
+            this.errors.push(e)
+        })
+    }
+  }
+
+  // Pushes posts to the server when called.
+//   postPost() {
+//     axios.post(`http://localhost:8082/api/process`, {
+//       img: '../../files/gambar.jpg',
+//     })
+//     .then(response => {
+//         console.log(response)
+//     })
+//     .catch(e => {
+//       this.errors.push(e)
+//     })
+
+    // async / await version (postPost() becomes async postPost())
+    //
+    // try {
+    //   await axios.post(`http://jsonplaceholder.typicode.com/posts`, {
+    //     body: this.postBody
+    //   })
+    // } catch (e) {
+    //   this.errors.push(e)
+    // }
+//   }
+}
+</script>
