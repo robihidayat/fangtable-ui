@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Take from "./views/Take.vue";
+import Upload from "./views/Upload.vue";
+import Result from "./views/Result.vue";
 
 Vue.use(Router);
 
@@ -16,6 +18,16 @@ export default new Router({
       path: "/take",
       name: "take",
       component: Take
+    },
+    {
+      path: "/upload",
+      name: "upload",
+      component: Upload
+    },
+    {
+      path: "/result",
+      name: "result",
+      component: Result
     }
   ]
 });

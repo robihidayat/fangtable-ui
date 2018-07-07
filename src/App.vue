@@ -46,6 +46,8 @@
     </v-toolbar> -->
     <router-link to="/">Go to Home</router-link>
     <router-link to="/take">Go to Take</router-link>
+    <router-link to="/upload">Go to Upload</router-link>
+    <router-link to="/result">Go to Result</router-link>
     <v-content>
       <router-view/>
     </v-content>
@@ -75,21 +77,6 @@
 
 export default {
   name: 'App',
-  // data () {
-    // return {
-      // clipped: false,
-      // drawer: true,
-      // fixed: false,
-      // items: [{
-      //   icon: 'bubble_chart',
-      //   title: 'Inspire'
-      // }],
-      // miniVariant: false,
-      // right: true,
-      // rightDrawer: false,
-      // title: 'Vuetify.js'
-    // }
-  // }
   data: () => ({
     gradient: 'to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)'
   })
