@@ -18,43 +18,9 @@
 
 <script>
 export default {
-    name: 'Home',
-  // data () {
-    // return {
-      // clipped: false,
-      // drawer: true,
-      // fixed: false,
-      // items: [{
-      //   icon: 'bubble_chart',
-      //   title: 'Inspire'
-      // }],
-      // miniVariant: false,
-      // right: true,
-      // rightDrawer: false,
-      // title: 'Vuetify.js'
-    // }
-  // }
+  name: 'Home',
   data: () => ({
     gradient: 'to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)'
   })  
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style> -->
