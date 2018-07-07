@@ -3,7 +3,7 @@ const tus = require("tus-node-server");
 const server = new tus.Server();
 
 const fileNameFromUrl = req => {
-  return req.url.replace(/\//g, "image");
+  return req.url.replace(/\//g, "gambar.jpg");
 };
 
 server.datastore = new tus.FileStore({

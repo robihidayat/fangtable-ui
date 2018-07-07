@@ -33,8 +33,3 @@
       </v-flex>
     </v-layout>
   </template>
-
-  <script>
-    const img = require('../../files/image')
-
-  </script>
