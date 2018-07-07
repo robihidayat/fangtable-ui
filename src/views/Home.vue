@@ -1,23 +1,47 @@
 <template>
   <v-container fluid>
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
-        <blockquote>
-          &#8220;First, solve the problem. Then, write the code.&#8221;
-          <footer>
-            <small>
-              <em>&mdash;John Johnson</em>
-            </small>
-          </footer>
-        </blockquote>
-      </v-layout>
-    </v-slide-y-transition>
+    <v-jumbotron
+      :gradient="gradient"
+      dark
+      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+    >
+      <v-container fill-height>
+        <v-layout align-center>
+          <v-flex text-xs-center>
+            <h3 class="display-3">Fitz App</h3>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-jumbotron>
   </v-container>
 </template>
 
+<script>
+export default {
+    name: 'Home',
+  // data () {
+    // return {
+      // clipped: false,
+      // drawer: true,
+      // fixed: false,
+      // items: [{
+      //   icon: 'bubble_chart',
+      //   title: 'Inspire'
+      // }],
+      // miniVariant: false,
+      // right: true,
+      // rightDrawer: false,
+      // title: 'Vuetify.js'
+    // }
+  // }
+  data: () => ({
+    gradient: 'to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)'
+  })  
+}
+</script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<!-- <style scoped>
 h1,
 h2 {
   font-weight: normal;
@@ -33,4 +57,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style> -->
