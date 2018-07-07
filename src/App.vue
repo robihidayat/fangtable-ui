@@ -24,7 +24,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer> -->
-    <v-toolbar
+    <!-- <v-toolbar
       app
       :clipped-left="clipped"
     >
@@ -43,11 +43,13 @@
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-toolbar> -->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/take">Go to Take</router-link>
     <v-content>
       <router-view/>
     </v-content>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       temporary
       :right="right"
       v-model="rightDrawer"
@@ -65,7 +67,7 @@
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -73,20 +75,23 @@
 
 export default {
   name: 'App',
-  data () {
-    return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
-      }],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
+  // data () {
+    // return {
+      // clipped: false,
+      // drawer: true,
+      // fixed: false,
+      // items: [{
+      //   icon: 'bubble_chart',
+      //   title: 'Inspire'
+      // }],
+      // miniVariant: false,
+      // right: true,
+      // rightDrawer: false,
+      // title: 'Vuetify.js'
+    // }
+  // }
+  data: () => ({
+    gradient: 'to top right, rgba(63,81,181, .7), rgba(25,32,72, .7)'
+  })
 }
 </script>
