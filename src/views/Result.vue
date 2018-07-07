@@ -3,9 +3,9 @@
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
           <v-card-media
-            height="300px"
+            height="350px"
           >
-            <!-- <img :src="dataUrl" /> -->
+            <img :src="require('../../files/gambar.jpg')" />
           </v-card-media>
   
           <v-card-title primary-title>

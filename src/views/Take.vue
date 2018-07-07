@@ -5,14 +5,9 @@
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
           <v-card-media
-            height="auto"
+            height="350px"
           >
-          <!-- <div> -->
-            <!-- <div class="ThumbnailContainer" v-if="collection === 'thumbnail'">
-                <button id="open-thumbnail-modal" class="button">Select file</button>
-            </div> -->
             <div class="WebcamContainer"></div>
-            <!-- </div> -->
           </v-card-media>
   
           <v-card-title primary-title>
@@ -50,17 +45,6 @@
                 }
             }
         },
-
-        // data() {
-        //     return {}
-        // },
-
-        // computed: {
-        //     uppyId() {
-        //         return this.modelClass + '-' + this.modelId + '-' + this.collection;
-        //     }
-        // },
-
         mounted() {
             const uppy = Uppy({
               id: 'uppy',
